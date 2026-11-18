@@ -2,10 +2,10 @@ package level_1.fluent_builder_pattern;
 
 public class Restaurant {
 
-    private final String withStarter;
-    private final String withMainPlat;
+    private final String withEntrant;
+    private final String withMainCourse;
     private final String withDessert;
-    private final String drink;
+    private final String withDrink;
 
 
 
