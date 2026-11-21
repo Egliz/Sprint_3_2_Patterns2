@@ -4,5 +4,5 @@ public interface EntrantPropertiesStep {
     EntrantPropertiesStep isVegan();
     EntrantPropertiesStep isGlutenFree();
 
-    MainCourse withMainCourse(String mainCourse);
+    MainCoursePropertiesStep withMainCourse(String mainCourse);
 }
