@@ -4,5 +4,8 @@ public interface SupplementStep {
 
     SupplementStep withSupplement(Supplement supplement);
     DessertChoiceStep withDessert(String dessert);
+    DessertChoiceStep withCoffee(String coffee);
+
+
 
 }

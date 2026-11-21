@@ -5,5 +5,8 @@ public interface MainCoursePropertiesStep {
     MainCoursePropertiesStep isGlutenFree();
 
     SupplementStep withSupplement(Supplement supplement);
+
     DessertChoiceStep withDessert(String dessert);
+    DessertChoiceStep withCoffee(String coffee);
+
 }
