@@ -12,9 +12,18 @@ public class Menu {
         this.entrant = menuBuilder.entrant;
         this.mainCourse = menuBuilder.mainCourse;
         this.dessert = menuBuilder.dessert;
-        this.coffe = menuBuilder.coffe;
+        this.coffe = menuBuilder.coffee;
         this.drink = menuBuilder.drink;
     }
 
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "entrant='" + entrant + '\'' +
+                ", mainCourse='" + mainCourse + '\'' +
+                ", dessert='" + dessert + '\'' +
+                ", coffe='" + coffe + '\'' +
+                ", drink='" + drink + '\'' +
+                '}';
     }
 }

@@ -9,4 +9,6 @@ public interface MainCoursePropertiesStep {
     DessertChoiceStep withDessert(String dessert);
     DessertChoiceStep withCoffee(String coffee);
 
+    BuildStep withDrink(String drink);
+    Menu build();
 }
