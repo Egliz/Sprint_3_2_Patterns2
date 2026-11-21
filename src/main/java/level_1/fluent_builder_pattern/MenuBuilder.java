@@ -13,8 +13,8 @@ public class MenuBuilder implements BuildStep, DessertChoiceStep,
     private String coffee;
     private String drink;
     private Supplement suplement;
-    private boolean isVegan;
-    private boolean isGlutenFree;
+    private boolean vegan;
+    private boolean glutenFree;
    // private double supplementPrice;
 
 
@@ -45,14 +45,14 @@ public class MenuBuilder implements BuildStep, DessertChoiceStep,
     }
 
     @Override
-    public EntrantPropertiesStep isVegan() {
-        this.isVegan = true;
+    public EntrantPropertiesStep vegan() {
+        this.vegan = true;
         return this;
     }
 
     @Override
-    public EntrantPropertiesStep isGlutenFree() {
-       this.isGlutenFree = true;
+    public EntrantPropertiesStep glutenFree() {
+       this.glutenFree = true;
         return this;
     }
 
@@ -96,5 +96,15 @@ public class MenuBuilder implements BuildStep, DessertChoiceStep,
 
     public Supplement getSuplement() {
         return suplement;
+    }
+
+    @Override
+    public boolean isVegan() {
+        return vegan;
+    }
+
+    @Override
+    public boolean isGlutenFree() {
+        return glutenFree;
     }
 }
