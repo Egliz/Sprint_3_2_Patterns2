@@ -24,11 +24,11 @@ public class MenuBuilder implements BuildStep, DessertChoiceStep,
         return this;
     }
 
-    /*
+
     @Override
     public Menu build() {
-        return null;
-    }*/
+        return new Menu(this);
+    }
 
     @Override
     public BuildStep withDessert(String dessert) {
@@ -72,5 +72,29 @@ public class MenuBuilder implements BuildStep, DessertChoiceStep,
     public EntrantPropertiesStep withEntrant(String entrant) {
         this.entrant = entrant;
         return this;
+    }
+
+    public String getEntrant() {
+        return entrant;
+    }
+
+    public String getMainCourse() {
+        return mainCourse;
+    }
+
+    public String getDessert() {
+        return dessert;
+    }
+
+    public String getCoffee() {
+        return coffee;
+    }
+
+    public String getDrink() {
+        return drink;
+    }
+
+    public Supplement getSuplement() {
+        return suplement;
     }
 }
