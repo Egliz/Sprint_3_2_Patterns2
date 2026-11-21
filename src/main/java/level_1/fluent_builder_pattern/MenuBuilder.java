@@ -1,6 +1,6 @@
 package level_1.fluent_builder_pattern;
 
-public class MenuBuilder implements BuildStep, DessertChoiceStep,
+public class MenuBuilder implements BuildStep,
         EntrantPropertiesStep,
         EntrantStep,
         MainCourse,
@@ -12,7 +12,7 @@ public class MenuBuilder implements BuildStep, DessertChoiceStep,
     private String dessert;
     private String coffee;
     private String drink;
-    private Supplement suplement;
+    private Supplement supplement;
     private boolean vegan;
     private boolean glutenFree;
    // private double supplementPrice;
@@ -58,7 +58,7 @@ public class MenuBuilder implements BuildStep, DessertChoiceStep,
 
     @Override
     public SupplementStep withSupplement(Supplement supplement) {
-        this.suplement = supplement;
+        this.supplement = supplement;
         return this;
     }
 
@@ -95,15 +95,13 @@ public class MenuBuilder implements BuildStep, DessertChoiceStep,
     }
 
     public Supplement getSuplement() {
-        return suplement;
+        return supplement;
     }
 
-    @Override
     public boolean isVegan() {
         return vegan;
     }
 
-    @Override
     public boolean isGlutenFree() {
         return glutenFree;
     }

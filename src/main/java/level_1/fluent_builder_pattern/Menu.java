@@ -31,6 +31,9 @@ public class Menu {
                 ", dessert='" + dessert + '\'' +
                 ", coffe='" + coffe + '\'' +
                 ", drink='" + drink + '\'' +
+                ", suplement=" + suplement +
+                ", isVegan=" + isVegan +
+                ", isGlutenFree=" + isGlutenFree +
                 '}';
     }
 }
