@@ -5,7 +5,9 @@ public class MenuBuilder implements BuildStep,
         EntrantStep,
         MainCourse,
         MainCoursePropertiesStep,
-        SupplementStep{
+        SupplementStep,
+        VeganStep,
+        GlutenStep{
 
     private String entrant;
     private String mainCourse;
@@ -45,21 +47,22 @@ public class MenuBuilder implements BuildStep,
     }
 
     @Override
-    public EntrantPropertiesStep vegan() {
+    public MenuBuilder vegan() {
         this.vegan = true;
         return this;
     }
 
     @Override
-    public EntrantPropertiesStep glutenFree() {
+    public MenuBuilder glutenFree() {
        this.glutenFree = true;
         return this;
     }
 
     @Override
-    public SupplementStep withSupplement(Supplement supplement) {
-        this.supplement = supplement;
-        return this;
+    public SupplementStep withSupplement(String name, double price) {
+       supplement = new Supplement(name, price);
+       this.supplement = supplement;
+       return this;
     }
 
     @Override
@@ -94,7 +97,7 @@ public class MenuBuilder implements BuildStep,
         return drink;
     }
 
-    public Supplement getSuplement() {
+    public Supplement getSupplement() {
         return supplement;
     }
 

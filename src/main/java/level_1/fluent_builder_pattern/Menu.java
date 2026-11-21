@@ -18,7 +18,7 @@ public class Menu {
         this.dessert = menuBuilder.getDessert();
         this.coffe = menuBuilder.getCoffee();
         this.drink = menuBuilder.getDrink();
-        this.suplement = menuBuilder.getSuplement();
+        this.suplement = menuBuilder.getSupplement();
         this.isVegan = menuBuilder.isVegan();
         this.isGlutenFree = menuBuilder.isGlutenFree();
     }
