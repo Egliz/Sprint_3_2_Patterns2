@@ -1,7 +1,7 @@
 package level_1.fluent_builder_pattern;
 
-public interface veganStep {
+public interface VeganStep {
 
-    glutenStep isGlutenFree();
+    GlutenStep isGlutenFree();
     Menu build();
 }
