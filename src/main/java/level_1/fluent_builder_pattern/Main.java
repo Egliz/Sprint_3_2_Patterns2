@@ -3,34 +3,24 @@ package level_1.fluent_builder_pattern;
 public class Main {
     public static void main(String[] args) {
 
-        Menu menu1 = MenuBuilder.builder()
-                .withEntrant("ll")
+        Menu executiveMenu = MenuBuilder.builder()
+                .withEntrant("Mediterranean salad")
                 .vegan()
                 .glutenFree()
-                .withMainCourse("kjj")
-                .withSupplement("algo", 2.4)
-                .withCoffee("cafe")
-                .withDrink("bebdida")
+                .withMainCourse("Beef steak")
+                .withSupplement("Extra side dish", 4.6)
+                .withDessert("Chocolate mousse")
+                .withDrink("Red wine")
                 .build();
 
-        Menu menuInf = MenuBuilder.builder()
-                .withMainCourse("kd")
-                .withSupplement("jkj", 8.9)
-                .withCoffee("kk")
-                .withDrink("oo")
-                .build();
+        Menu halfMenu = MenuBuilder.builder()
+                .withMainCourse("Rissoto")
+                .glutenFree().
+                build();
+               // .withCoffee("Espresso")
+                //.withDrink("Water")
+                //.build();
 
-        Menu menuInf2 = MenuBuilder.builder()
-                .withMainCourse("dd")
-                .glutenFree()
-                .withDessert("kk")
-                .withDrink("kk")
-                .build();
-
-        Menu menu3 = MenuBuilder.builder()
-                .withEntrant("d")
-                .withMainCourse("ll")
-                .withDrink("l")
-                .build();
+        System.out.println(executiveMenu + "\n" + halfMenu);
     }
 }
