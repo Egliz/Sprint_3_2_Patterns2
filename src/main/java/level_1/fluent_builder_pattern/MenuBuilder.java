@@ -2,7 +2,7 @@ package level_1.fluent_builder_pattern;
 
 public class MenuBuilder implements BuildStep,
         EntrantPropertiesStep,
-        EntrantStep,
+        MenuStartStep,
         MainCourse,
         MainCoursePropertiesStep,
         SupplementStep,
@@ -19,6 +19,10 @@ public class MenuBuilder implements BuildStep,
     private boolean glutenFree;
    // private double supplementPrice;
 
+
+    public static MenuStartStep builder(){
+        return new MenuBuilder();
+    }
 
     @Override
     public BuildStep withDrink(String drink) {

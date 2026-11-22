@@ -1,7 +1,7 @@
 package level_1.fluent_builder_pattern;
 
 public interface MainCoursePropertiesStep {
-    GlutenStep vegan();
+    MainCoursePropertiesStep vegan();
     MainCoursePropertiesStep glutenFree();
 
     SupplementStep withSupplement(String name, double price);
