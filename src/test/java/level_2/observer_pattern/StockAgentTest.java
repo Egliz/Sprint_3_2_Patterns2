@@ -26,7 +26,6 @@ public class StockAgentTest {
 
     @Test
     void shouldNotifyAllObserversWhenStockMarketUp() {
-
         StockAgent agent = new StockAgent();
 
         Observer alphaBrokers = new StockBrokerAgency("Alpha Brokers");
@@ -42,5 +41,25 @@ public class StockAgentTest {
         assertTrue(result.contains("Alpha Brokers received notification: Stock market went UP to 150.75"));
 
         assertTrue(result.contains("Zenith Investments received notification: Stock market went UP to 150.75"));
+    }
+
+
+    @Test
+    void shouldNotifyAllObserversWhenStockMarketDown() {
+        StockAgent agent = new StockAgent();
+
+        Observer alphaBrokers = new StockBrokerAgency("Alpha Brokers");
+        Observer zenithInvestments = new StockBrokerAgency("Zenith Investments");
+
+        agent.addObserver(alphaBrokers);
+        agent.addObserver(zenithInvestments);
+
+        agent.stockMarketDown(145.50);
+
+        String result = output.toString();
+
+        assertTrue(result.contains("Alpha Brokers received notification: Stock market went DOWN to 145.5"));
+
+        assertTrue(result.contains("Zenith Investments received notification: Stock market went DOWN to 145.5"));
     }
 }
