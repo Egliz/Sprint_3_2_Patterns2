@@ -90,5 +90,13 @@ public class MenuBuilderTest {
         assertNull(menu.getDessert());
     }
 
+    @Test
+    void shouldCreateMenuWithoutDessertOrCoffee() {
+        Menu menu = MenuBuilder.builder()
+                .withMainCourse("Risotto")
+                .build();
 
+        assertNull(menu.getDessert());
+        assertNull(menu.getCoffee());
+    }
 }
