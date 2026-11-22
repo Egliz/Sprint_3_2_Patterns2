@@ -29,4 +29,12 @@ public class StockAgent {
             System.out.println(ob.notification(" received notification: Stock market went DOWN to " + value));
         }
     }
-}
+
+    public void notifyObservers(String message){
+
+        for(Observer observer : observers){
+            observer.notification(message);
+        }
+    }
+
+    }
