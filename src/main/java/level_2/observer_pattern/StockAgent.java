@@ -16,4 +16,10 @@ public class StockAgent {
         observers.remove(observer);
     }
 
+    public void stockMarketUp(double value){
+        this.value = value;
+        for(Observer ob : observers) {
+            System.out.println(ob.notification(" received notification: Stock market went UP to " + value));
+        }
+    }
 }
