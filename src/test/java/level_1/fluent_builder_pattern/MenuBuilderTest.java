@@ -69,7 +69,14 @@ public class MenuBuilderTest {
         assertEquals(2.50, menu.getSupplement().getPrice());
     }
 
+    @Test
+    void shouldCreateVeganMenu() {
+        Menu menu = MenuBuilder.builder()
+                .withMainCourse("Vegetable risotto")
+                .vegan()
+                .build();
 
-
+        assertTrue(menu.isVegan());
+    }
 
 }
