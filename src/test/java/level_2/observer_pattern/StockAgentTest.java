@@ -13,9 +13,20 @@ public class StockAgentTest {
 
     private final ByteArrayOutputStream output = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
+    private StockAgent agent;
+    private Observer alpha;
+    private Observer zenith;
 
     @BeforeEach
     void setUp() {
+        agent = new StockAgent();
+        alpha = new StockBrokerAgency("Alpha Brokers");
+        zenith = new StockBrokerAgency("Zenith Investments");
+
+        agent.addObserver(alpha);
+        agent.addObserver(zenith);
+
+        output.reset();
         System.setOut(new PrintStream(output));
     }
 
@@ -26,14 +37,6 @@ public class StockAgentTest {
 
     @Test
     void shouldNotifyAllObserversWhenStockMarketUp() {
-        StockAgent agent = new StockAgent();
-
-        Observer alphaBrokers = new StockBrokerAgency("Alpha Brokers");
-        Observer zenithInvestments = new StockBrokerAgency("Zenith Investments");
-
-        agent.addObserver(alphaBrokers);
-        agent.addObserver(zenithInvestments);
-
         agent.stockMarketUp(150.75);
 
         String result = output.toString();
@@ -46,14 +49,6 @@ public class StockAgentTest {
 
     @Test
     void shouldNotifyAllObserversWhenStockMarketDown() {
-        StockAgent agent = new StockAgent();
-
-        Observer alphaBrokers = new StockBrokerAgency("Alpha Brokers");
-        Observer zenithInvestments = new StockBrokerAgency("Zenith Investments");
-
-        agent.addObserver(alphaBrokers);
-        agent.addObserver(zenithInvestments);
-
         agent.stockMarketDown(145.50);
 
         String result = output.toString();
