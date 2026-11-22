@@ -79,4 +79,16 @@ public class MenuBuilderTest {
         assertTrue(menu.isVegan());
     }
 
+    @Test
+    void shouldCreateMenuWithCoffee() {
+        Menu menu = MenuBuilder.builder()
+                .withMainCourse("Risotto")
+                .withCoffee("Espresso")
+                .build();
+
+        assertEquals("Espresso", menu.getCoffee());
+        assertNull(menu.getDessert());
+    }
+
+
 }

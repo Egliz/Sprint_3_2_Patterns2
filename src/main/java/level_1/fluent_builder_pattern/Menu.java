@@ -4,7 +4,7 @@ public class Menu {
     private final String entrant;
     private final String mainCourse;
     private final String dessert;
-    private final String coffe;
+    private final String coffee;
     private final String drink;
     private final Supplement supplement;
     //private final double supplementPrice;
@@ -16,7 +16,7 @@ public class Menu {
         this.entrant = menuBuilder.getEntrant();
         this.mainCourse = menuBuilder.getMainCourse();
         this.dessert = menuBuilder.getDessert();
-        this.coffe = menuBuilder.getCoffee();
+        this.coffee = menuBuilder.getCoffee();
         this.drink = menuBuilder.getDrink();
         this.supplement = menuBuilder.getSupplement();
         this.isVegan = menuBuilder.isVegan();
@@ -29,7 +29,7 @@ public class Menu {
                 "entrant='" + entrant + '\'' +
                 ", mainCourse='" + mainCourse + '\'' +
                 ", dessert='" + dessert + '\'' +
-                ", coffe='" + coffe + '\'' +
+                ", coffe='" + coffee + '\'' +
                 ", drink='" + drink + '\'' +
                 ", suplement=" + supplement +
                 ", isVegan=" + isVegan +
@@ -49,8 +49,8 @@ public class Menu {
         return dessert;
     }
 
-    public String getCoffe() {
-        return coffe;
+    public String getCoffee() {
+        return coffee;
     }
 
     public String getDrink() {
