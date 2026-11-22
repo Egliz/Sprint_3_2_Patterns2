@@ -18,23 +18,18 @@ public class StockAgent {
 
     public void stockMarketUp(double value){
         this.value = value;
-        for(Observer ob : observers) {
-            System.out.println(ob.notification(" received notification: Stock market went UP to " + value));
-        }
+        notifyObservers(" received notification: Stock market went UP to " + value);
     }
 
     public void stockMarketDown(double value){
         this.value = value;
-        for(Observer ob : observers) {
-            System.out.println(ob.notification(" received notification: Stock market went DOWN to " + value));
-        }
+        notifyObservers(" received notification: Stock market went DOWN to " + value);
     }
 
     public void notifyObservers(String message){
 
         for(Observer observer : observers){
-            observer.notification(message);
+            System.out.println(observer.notification(message));
         }
     }
-
-    }
+}
