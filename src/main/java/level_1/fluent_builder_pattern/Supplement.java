@@ -17,4 +17,12 @@ public class Supplement {
                 ", price=" + price +
                 '}';
     }
+
+    public String getSupplement() {
+        return supplement;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 }

@@ -6,8 +6,8 @@ public class Menu {
     private final String dessert;
     private final String coffe;
     private final String drink;
-    private final Supplement suplement;
-  //  private final double supplementPrice;
+    private final Supplement supplement;
+    //private final double supplementPrice;
     private final boolean isVegan;
     private final boolean isGlutenFree;
 
@@ -18,7 +18,7 @@ public class Menu {
         this.dessert = menuBuilder.getDessert();
         this.coffe = menuBuilder.getCoffee();
         this.drink = menuBuilder.getDrink();
-        this.suplement = menuBuilder.getSupplement();
+        this.supplement = menuBuilder.getSupplement();
         this.isVegan = menuBuilder.isVegan();
         this.isGlutenFree = menuBuilder.isGlutenFree();
     }
@@ -31,7 +31,7 @@ public class Menu {
                 ", dessert='" + dessert + '\'' +
                 ", coffe='" + coffe + '\'' +
                 ", drink='" + drink + '\'' +
-                ", suplement=" + suplement +
+                ", suplement=" + supplement +
                 ", isVegan=" + isVegan +
                 ", isGlutenFree=" + isGlutenFree +
                 '}';
@@ -57,8 +57,8 @@ public class Menu {
         return drink;
     }
 
-    public Supplement getSuplement() {
-        return suplement;
+    public Supplement getSupplement() {
+        return supplement;
     }
 
     public boolean isVegan() {

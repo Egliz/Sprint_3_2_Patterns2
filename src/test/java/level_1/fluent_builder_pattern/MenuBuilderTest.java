@@ -2,8 +2,7 @@ package level_1.fluent_builder_pattern;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MenuBuilderTest {
 
@@ -57,5 +56,20 @@ public class MenuBuilderTest {
 
         assertNull(menu.getDrink());
     }
+
+    @Test
+    void shouldCreateMenuWithSupplement() {
+        Menu menu = MenuBuilder.builder()
+                .withMainCourse("Steak")
+                .withSupplement("Extra cheese", 2.50)
+                .build();
+
+        assertNotNull(menu.getSupplement());
+        assertEquals("Extra cheese", menu.getSupplement().getSupplement());
+        assertEquals(2.50, menu.getSupplement().getPrice());
+    }
+
+
+
 
 }
