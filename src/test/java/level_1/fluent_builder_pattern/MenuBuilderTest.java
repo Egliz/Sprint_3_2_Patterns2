@@ -35,4 +35,20 @@ public class MenuBuilderTest {
         assertEquals("Water", menu.getDrink());
     }
 
+    @Test
+    void shouldCreateKidsMenu() {
+        Menu menu = MenuBuilder.builder()
+                .withMainCourse("Chicken nuggets")
+                .withDessert("Ice cream")
+                .withDrink("Orange juice")
+                .build();
+
+        assertNull(menu.getEntrant());
+        assertEquals("Chicken nuggets", menu.getMainCourse());
+        assertEquals("Ice cream", menu.getDessert());
+        assertEquals("Orange juice", menu.getDrink());
+    }
+
+
+
 }
