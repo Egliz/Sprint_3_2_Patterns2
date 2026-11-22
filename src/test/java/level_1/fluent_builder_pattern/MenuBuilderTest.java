@@ -49,6 +49,13 @@ public class MenuBuilderTest {
         assertEquals("Orange juice", menu.getDrink());
     }
 
+    @Test
+    void shouldCreateMenuWithoutDrink() {
+        Menu menu = MenuBuilder.builder()
+                .withMainCourse("Risotto")
+                .build();
 
+        assertNull(menu.getDrink());
+    }
 
 }
