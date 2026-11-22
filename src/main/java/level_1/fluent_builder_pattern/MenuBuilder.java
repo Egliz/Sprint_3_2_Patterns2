@@ -1,12 +1,14 @@
 package level_1.fluent_builder_pattern;
 
+import level_1.fluent_builder_pattern.interfaces_with_steps.*;
+
 public class MenuBuilder implements BuildStep,
         EntrantPropertiesStep,
         MenuStartStep,
         MainCoursePropertiesStep,
         SupplementStep,
         VeganStep,
-        GlutenStep{
+        GlutenStep {
 
     private String entrant;
     private String mainCourse;
