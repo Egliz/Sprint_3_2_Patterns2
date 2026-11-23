@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class StockAgentTest {
@@ -56,5 +57,17 @@ public class StockAgentTest {
         assertTrue(result.contains("Alpha Brokers received notification: Stock market went DOWN to 145.5"));
 
         assertTrue(result.contains("Zenith Investments received notification: Stock market went DOWN to 145.5"));
+    }
+
+    @Test
+    void shouldNotNotifyRemovedObserver() {
+        agent.removeObserver(zenith);
+
+        agent.stockMarketUp(150.75);
+
+        String result = output.toString();
+
+        assertTrue(result.contains("Alpha Brokers"));
+        assertFalse(result.contains("Zenith Investments"));
     }
 }
