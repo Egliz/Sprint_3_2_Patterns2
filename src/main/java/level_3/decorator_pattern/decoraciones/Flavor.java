@@ -14,7 +14,7 @@ import level_3.decorator_pattern.BubbleTeaDecorator;
 
         @Override
         public String getDescription() {
-            return super.getDescription() + " Flavor : " + flavor;
+            return super.getDescription() + " + Flavor : " + flavor;
         }
 
         @Override
