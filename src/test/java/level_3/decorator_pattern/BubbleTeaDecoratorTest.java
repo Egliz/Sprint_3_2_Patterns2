@@ -13,17 +13,15 @@ public class BubbleTeaDecoratorTest {
     @Test
     public void shouldReturnLatteDescription(){
         BubbleTea teaLatte = new LatteBase();
-        String result = teaLatte.getDescription();
 
-        assertEquals("Latte Bubble Tea", result);
+        assertEquals("Latte Bubble Tea", teaLatte.getDescription());
     }
 
     @Test
     public void shouldReturnLatteCost(){
         BubbleTea teaLatte = new LatteBase();
-        double result = teaLatte.getCost();
 
-        assertEquals(3.50, result);
+        assertEquals(3.50, teaLatte.getCost());
     }
 
     @Test
@@ -31,11 +29,8 @@ public class BubbleTeaDecoratorTest {
         BubbleTea teaMatcha = new MatchaBase();
         teaMatcha = new Ice(teaMatcha);
 
-        String descriptionResult = teaMatcha.getDescription();
-        double costResult = teaMatcha.getCost();
-
-        assertEquals("Matcha Bubble Tea + Ice", descriptionResult);
-        assertEquals( 3.45, costResult);
+        assertEquals("Matcha Bubble Tea + Ice", teaMatcha.getDescription());
+        assertEquals( 3.45, teaMatcha.getCost());
     }
 
     @Test
@@ -43,11 +38,8 @@ public class BubbleTeaDecoratorTest {
         BubbleTea teaMatcha = new MatchaBase();
         teaMatcha = new Tapioca(teaMatcha);
 
-        String descriptionResult = teaMatcha.getDescription();
-        double costResult = teaMatcha.getCost();
-
-        assertEquals("Matcha Bubble Tea + Tapioca", descriptionResult);
-        assertEquals( 3.70, costResult);
+        assertEquals("Matcha Bubble Tea + Tapioca", teaMatcha.getDescription());
+        assertEquals( 3.70, teaMatcha.getCost());
     }
 
     @Test
@@ -55,11 +47,8 @@ public class BubbleTeaDecoratorTest {
         BubbleTea teaMatcha = new MatchaBase();
         teaMatcha = new Flavor(teaMatcha, "Mango");
 
-        String descriptionResult = teaMatcha.getDescription();
-        double costResult = teaMatcha.getCost();
-
-        assertEquals("Matcha Bubble Tea + Flavor : Mango", descriptionResult);
-        assertEquals( 3.8000000000000003, costResult);
+        assertEquals("Matcha Bubble Tea + Flavor : Mango", teaMatcha.getDescription());
+        assertEquals( 3.8000000000000003, teaMatcha.getCost());
     }
 
     @Test
@@ -82,5 +71,4 @@ public class BubbleTeaDecoratorTest {
         assertEquals(3.50, latte.getCost());
         assertEquals(3.75, decoratedTea.getCost());
     }
-
 }
