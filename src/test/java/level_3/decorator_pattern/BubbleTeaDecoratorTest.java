@@ -35,6 +35,17 @@ public class BubbleTeaDecoratorTest {
 
         assertEquals("Matcha Bubble Tea + Ice", descriptionResult);
         assertEquals( 3.45, costResult);
+    }
 
+    @Test
+    public void shouldAddTapiocaToBubbleTea(){
+        BubbleTea teaMatcha = new MatchaBase();
+        teaMatcha = new Tapioca(teaMatcha);
+
+        String descriptionResult = teaMatcha.getDescription();
+        double costResult = teaMatcha.getCost();
+
+        assertEquals("Matcha Bubble Tea + Tapioca", descriptionResult);
+        assertEquals( 3.70, costResult);
     }
 }
