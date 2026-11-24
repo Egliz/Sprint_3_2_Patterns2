@@ -70,12 +70,17 @@ public class BubbleTeaDecoratorTest {
         teaLatte = new Sugar(teaLatte);
         teaLatte = new Flavor(teaLatte, "Mango");
 
-        String descriptionResult = teaLatte.getDescription();
-        double costResult = teaLatte.getCost();
-
-        assertEquals("Latte Bubble Tea + Ice + Tapioca + Sugar + Flavor : Mango", descriptionResult);
-        assertEquals( 5.1499999999999995, costResult);
+        assertEquals("Latte Bubble Tea + Ice + Tapioca + Sugar + Flavor : Mango", teaLatte.getDescription());
+        assertEquals( 5.1499999999999995, teaLatte.getCost());
     }
 
+    @Test
+    public void shouldNotModifyOriginalBubbleTeaWhenDecorated(){
+        BubbleTea latte = new LatteBase();
+        BubbleTea decoratedTea = new Ice(latte);
+
+        assertEquals(3.50, latte.getCost());
+        assertEquals(3.75, decoratedTea.getCost());
+    }
 
 }
