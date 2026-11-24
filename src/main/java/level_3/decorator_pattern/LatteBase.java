@@ -11,6 +11,6 @@ public class LatteBase implements BubbleTea{
 
     @Override
     public double getCost() {
-        return 0;
+        return cost;
     }
 }
