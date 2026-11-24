@@ -1,21 +1,21 @@
-package level_3.decorator_pattern.decoraciones;
+package level_3.decorator_pattern.decorations;
 
 import level_3.decorator_pattern.BubbleTea;
 import level_3.decorator_pattern.BubbleTeaDecorator;
 
-public class Sugar extends BubbleTeaDecorator {
+public class Ice extends BubbleTeaDecorator {
 
-    public Sugar(BubbleTea bubbleTea) {
+    public Ice(BubbleTea bubbleTea) {
         super(bubbleTea);
     }
 
     @Override
     public String getDescription() {
-        return super.getDescription() + " + Sugar";
+        return super.getDescription() + " + Ice";
     }
 
     @Override
     public double getCost(){
-        return super.getCost() + 0.30;
+        return super.getCost() + 0.25;
     }
 }

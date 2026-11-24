@@ -1,9 +1,9 @@
 package level_3.decorator_pattern;
 
-import level_3.decorator_pattern.decoraciones.Ice;
-import level_3.decorator_pattern.decoraciones.Sugar;
-import level_3.decorator_pattern.decoraciones.Flavor;
-import level_3.decorator_pattern.decoraciones.Tapioca;
+import level_3.decorator_pattern.decorations.Ice;
+import level_3.decorator_pattern.decorations.Sugar;
+import level_3.decorator_pattern.decorations.Flavor;
+import level_3.decorator_pattern.decorations.Tapioca;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

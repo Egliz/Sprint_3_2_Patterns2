@@ -1,4 +1,4 @@
-package level_3.decorator_pattern.decoraciones;
+package level_3.decorator_pattern.decorations;
 
 import level_3.decorator_pattern.BubbleTea;
 import level_3.decorator_pattern.BubbleTeaDecorator;
