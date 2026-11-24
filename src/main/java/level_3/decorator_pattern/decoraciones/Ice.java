@@ -1,6 +1,9 @@
-package level_3.decorator_pattern;
+package level_3.decorator_pattern.decoraciones;
 
-public class Ice extends BubbleTeaDecorator{
+import level_3.decorator_pattern.BubbleTea;
+import level_3.decorator_pattern.BubbleTeaDecorator;
+
+public class Ice extends BubbleTeaDecorator {
 
     public Ice(BubbleTea bubbleTea) {
         super(bubbleTea);
