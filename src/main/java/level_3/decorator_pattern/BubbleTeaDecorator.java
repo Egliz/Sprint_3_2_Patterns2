@@ -8,6 +8,11 @@ public abstract class BubbleTeaDecorator implements BubbleTea {
         this.bubbleTea = bubbleTea;
     }
 
+    @Override
+    public String getDescription(){
+        return bubbleTea.getDescription();
+    }
+
 
 
 }
