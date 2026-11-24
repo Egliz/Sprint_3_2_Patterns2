@@ -17,5 +17,4 @@ public abstract class BubbleTeaDecorator implements BubbleTea {
     public double getCost(){
         return bubbleTea.getCost();
     }
-
 }
