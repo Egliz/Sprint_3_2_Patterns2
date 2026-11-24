@@ -6,7 +6,7 @@ public class LatteBase implements BubbleTea{
 
     @Override
     public String getDescription() {
-        return "Latte Base";
+        return "Latte Bubble Tea";
     }
 
     @Override
