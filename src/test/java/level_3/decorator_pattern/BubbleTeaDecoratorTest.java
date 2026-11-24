@@ -62,5 +62,20 @@ public class BubbleTeaDecoratorTest {
         assertEquals( 3.8000000000000003, costResult);
     }
 
+    @Test
+    public void shouldCombineMultipleDecorators(){
+        BubbleTea teaLatte = new LatteBase();
+        teaLatte = new Ice(teaLatte);
+        teaLatte = new Tapioca(teaLatte);
+        teaLatte = new Sugar(teaLatte);
+        teaLatte = new Flavor(teaLatte, "Mango");
+
+        String descriptionResult = teaLatte.getDescription();
+        double costResult = teaLatte.getCost();
+
+        assertEquals("Latte Bubble Tea + Ice + Tapioca + Sugar + Flavor : Mango", descriptionResult);
+        assertEquals( 5.1499999999999995, costResult);
+    }
+
 
 }
