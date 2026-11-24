@@ -43,7 +43,6 @@ public class StockAgentTest {
         String result = output.toString();
 
         assertTrue(result.contains("Alpha Brokers received notification: Stock market went UP to 150.75"));
-
         assertTrue(result.contains("Zenith Investments received notification: Stock market went UP to 150.75"));
     }
 
@@ -55,7 +54,6 @@ public class StockAgentTest {
         String result = output.toString();
 
         assertTrue(result.contains("Alpha Brokers received notification: Stock market went DOWN to 145.5"));
-
         assertTrue(result.contains("Zenith Investments received notification: Stock market went DOWN to 145.5"));
     }
 
