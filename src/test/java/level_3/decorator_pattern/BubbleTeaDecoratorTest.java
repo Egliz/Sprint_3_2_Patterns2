@@ -15,4 +15,13 @@ public class BubbleTeaDecoratorTest {
 
         assertEquals("Latte Bubble Tea", result);
     }
+
+    @Test
+    public void shouldReturnLatteCost(){
+        BubbleTea teaLatte = new LatteBase();
+        double result = teaLatte.getCost();
+
+        assertEquals(3.50, result);
+
+    }
 }
