@@ -2,6 +2,7 @@ package level_3.decorator_pattern;
 
 import level_3.decorator_pattern.decoraciones.Ice;
 import level_3.decorator_pattern.decoraciones.Sugar;
+import level_3.decorator_pattern.decoraciones.Flavor;
 import level_3.decorator_pattern.decoraciones.Tapioca;
 import org.junit.jupiter.api.Test;
 
@@ -48,4 +49,18 @@ public class BubbleTeaDecoratorTest {
         assertEquals("Matcha Bubble Tea + Tapioca", descriptionResult);
         assertEquals( 3.70, costResult);
     }
+
+    @Test
+    public void shouldAddFlavorToBubbleTea(){
+        BubbleTea teaMatcha = new MatchaBase();
+        teaMatcha = new Flavor(teaMatcha, "Mango");
+
+        String descriptionResult = teaMatcha.getDescription();
+        double costResult = teaMatcha.getCost();
+
+        assertEquals("Matcha Bubble Tea + Flavor : Mango", descriptionResult);
+        assertEquals( 3.8000000000000003, costResult);
+    }
+
+
 }
